@@ -1,0 +1,3 @@
+2023/1/29 "update 2023/1/29 预想 and reference" [bgArray]
+没啥玩也，加了个TODO和NOTE。
+
