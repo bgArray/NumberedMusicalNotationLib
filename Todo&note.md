@@ -55,9 +55,9 @@
 
 ---
 
-然后MNM()继承MNMFile()
+然后NMN()继承NMNFile()
 
-MNM() 是简谱主类，文件流方法来自MNMFile()，图片流方法来自MNMFile()
+NMN() 是简谱主类，文件流方法来自NMNFile()，图片流方法来自NMNPic()
 
 直接包含一些MetaEvent() 主要是title那些，速度、调号可以先不要也行
 

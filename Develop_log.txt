@@ -1,3 +1,6 @@
 2023/1/29 "update 2023/1/29 预想 and reference" [bgArray]
 没啥玩也，加了个TODO和NOTE。
 
+2023/1/29 "update 2023/1/29 frame1" [bgArray]
+大改，开始模仿mido框架布局。
+693 insertions(+), 2 deletions(-)
