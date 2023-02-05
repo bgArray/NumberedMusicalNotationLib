@@ -1,8 +1,9 @@
-from nmn_file import nmn_file_main, nmn_pic_main
+from nmn_file.nmn_pic_main import *
+from nmn_file.nmn_file_main import *
 
 
 class NumberedMusicalNotation(
-    NMNFile_main.NumberedMusicalNotationFile,
+    NumberedMusicalNotationFile,
     object,
 ):
     def __init__(self, file_path: str = None):
@@ -11,7 +12,7 @@ class NumberedMusicalNotation(
         self.file_path = file_path
 
     def generate_pictures(self):
-        NMNPic_main.NumberedMusicalNotationPicture(self)
+        NumberedMusicalNotationPicture(self)
 
 
 if __name__ == "__main__":

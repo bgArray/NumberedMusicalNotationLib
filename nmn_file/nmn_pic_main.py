@@ -1,4 +1,4 @@
-from numbered_musical_notation import *
+from numbered_musical_notation import NumberedMusicalNotation
 
 
 class NumberedMusicalNotationPicture(object):
