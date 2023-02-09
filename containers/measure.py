@@ -22,6 +22,10 @@ class Measure(list):
 
         self.message_count: int = 0  # 信息数量
 
+    def __repr__(self):
+        list_ = super().__repr__()
+        return f"Measure(measure num:{self.measure_number}, {list_})"
+
     def __getitem__(self, item):
         return super().__getitem__(item)
 

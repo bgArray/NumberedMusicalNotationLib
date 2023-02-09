@@ -276,3 +276,28 @@ Track()可以加许多Event()
 2/7 考试补充一点
 自由节奏就采取mid时间，然后也允许采用mid计时，也允许采用双计时
 ---
+
+2/9 关于小节时间计算的问题
+
+首先，小节内部有两种时间计算方式，一种是mid时间，一种是正常的拍子时间。
+
+用mid计时的小节，需要在小节内部有一个时间戳，这个时间戳是从小节开始到当前音符的时间。
+
+然后mid计时的Measure()可能需要继承一个mid的时间计算容器类，这个类可以用来计算mid时间。
+
+然后，小节的时间计算方式比较复杂。
+
+首先，我们不确定Measure里面是否有Voice。
+
+如果有多个Voice，那么每个Voice都有自己的时间计算方式。
+
+那么我们要决定是Voice来控制时间计算方式，还是Measure来控制时间计算方式。
+
+等会，我刚吃完饭，我想好了一个方案。
+
+首先，需要有Container基类，这个基类就是所有容器的基类，比如Measure，Voice，Chord都是容器。
+
+但是，Container不具备时间计算功能，因为时间计算分两种，两个时间计算方式的基类继承Container，分别是MidTimeContainer和
+BeatTimeContainer。
+
+然后，Measure就有两个版本，一个是MidTimeMeasure，一个是BeatTimeMeasure（Measure）。

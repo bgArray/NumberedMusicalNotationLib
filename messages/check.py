@@ -1,6 +1,6 @@
 from numbers import Real, Integral
 from messages.specs import *
-from ..py2 import convert_py2_bytes
+from py2_.py2 import convert_py2_bytes
 
 
 def check_type(type_):
@@ -25,7 +25,7 @@ def check_pos(pos):
 
 def check_pitch(pitch):
     if not isinstance(pitch, Integral):
-        raise TypeError('pichwheel value must be int')
+        raise TypeError('pitchwheel value must be int')
     elif not MIN_PITCHWHEEL <= pitch <= MAX_PITCHWHEEL:
         raise ValueError('pitchwheel value must be in range {}..{}'.format(
             MIN_PITCHWHEEL, MAX_PITCHWHEEL))
